@@ -16,6 +16,12 @@
 
 #include <vector>
 
+#ifdef _MSC_VER
+#define MIDIFILE_EXPORT __declspec(dllexport)
+#else
+#define MIDIFILE_EXPORT
+#endif
+
 using namespace std;
 
 typedef unsigned char  uchar;
