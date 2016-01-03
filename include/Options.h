@@ -18,6 +18,12 @@
 #include <map>
 #include <string>
 
+#ifdef _MSC_VER
+#define MIDIFILE_EXPORT __declspec(dllexport)
+#else
+#define MIDIFILE_EXPORT
+#endif
+
 using namespace std;
 
 class MIDIFILE_EXPORT Option_register {
