@@ -18,7 +18,7 @@
 
 using namespace std;
 
-class MidiEventList {
+class MIDIFILE_EXPORT MidiEventList {
    public:
                   MidiEventList    (void);
 

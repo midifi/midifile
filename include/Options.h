@@ -20,7 +20,7 @@
 
 using namespace std;
 
-class Option_register {
+class MIDIFILE_EXPORT Option_register {
    public:
                    Option_register    (void);
                    Option_register    (const string& aDefinition, char aType,
@@ -58,7 +58,7 @@ class Option_register {
 
 
 
-class Options {
+class MIDIFILE_EXPORT Options {
    public:
                       Options           (void);
                       Options           (int argc, char** argv);

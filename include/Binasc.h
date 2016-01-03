@@ -21,7 +21,7 @@ typedef unsigned char uchar;
 typedef unsigned short ushort;
 typedef unsigned long ulong;
 
-class Binasc {
+class MIDIFILE_EXPORT Binasc {
    public:
                Binasc         (void);
               ~Binasc         ();

@@ -48,7 +48,7 @@ class _TickTime {
 };
 
 
-class MidiFile {
+class MIDIFILE_EXPORT MidiFile {
    public:
                 MidiFile                  (void);
                 MidiFile                  (const char* aFile);
