@@ -9,6 +9,7 @@
 // description:   Interface to convert bytes between binary and ASCII forms.
 //
 
+#include "Sys.h"
 #include "Binasc.h"
 #include <sstream>
 #include <string.h>
@@ -1628,6 +1629,3 @@ ostream& Binasc::writeLittleEndianDouble(ostream& out, double value) {
    out << data.bytes[7];
    return out;
 }
-
-
-
