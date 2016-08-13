@@ -11,6 +11,7 @@
 //                for the MidiFile class.
 //
 
+#include "Sys.h"
 #include "MidiEvent.h"
 #include <stdlib.h>
 
@@ -262,6 +263,3 @@ double MidiEvent::getDurationInSeconds(void) {
       return seconds - seconds2;
    }
 }
-
-
-

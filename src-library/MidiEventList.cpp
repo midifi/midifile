@@ -11,6 +11,7 @@
 //
 
 
+#include "Sys.h"
 #include "MidiEventList.h"
 
 #include <vector>
@@ -300,5 +301,3 @@ MidiEventList& MidiEventList::operator=(MidiEventList other) {
    list.swap(other.list);
    return *this;
 }
-
-

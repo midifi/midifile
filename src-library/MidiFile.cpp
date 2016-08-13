@@ -27,6 +27,7 @@
 //                class is used for example in the MidiPerform class.
 //
 
+#include "Sys.h"
 #include "MidiFile.h"
 #include "Binasc.h"
 
@@ -213,14 +214,13 @@ int MidiFile::read(const char* filename) {
 // string version of read().
 //
 
-
 int MidiFile::read(const string& filename) {
    timemapvalid = 0;
    setFilename(filename);
    rwstatus = 1;
 
    fstream input;
-   input.open(filename.data(), ios::binary | ios::in);
+   input.open(filename.c_str(), ios::binary | ios::in);
 
    if (!input.is_open()) {
       return 0;
@@ -898,7 +898,7 @@ void MidiFile::splitTracks(void) {
 
    MidiEventList* olddata = events[0];
    events[0] = NULL;
-   events.resize(trackCount);
+   events.resize(trackCount+1);
    for (i=0; i<=trackCount; i++) {
       events[i] = new MidiEventList;
    }
@@ -2129,7 +2129,6 @@ void MidiFile::clear_no_deallocate(void) {
    events[0] = new MidiEventList;
    timemapvalid=0;
    timemap.clear();
-   events.resize(0);
 }
 
 
@@ -2580,4 +2579,3 @@ MidiFile& MidiFile::operator=(MidiFile other) {
    events.swap(other.events);
    return *this;
 }
-
